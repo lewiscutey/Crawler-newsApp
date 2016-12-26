@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/swiper.jquery.js"></script>
+    <script src="/js/swiper.animate1.0.2.min.js"></script>
+    <script src="/js/index.js"></script>
+    <title>News-APP</title>
+</head>
+<body>
+<div class="news">
+    <div class="title">
+        <div class="back"><a href="/category"></a></div>
+        <p>头条新闻</p>
+        <div class="nav"></div>
+        <div class="nav-menu"></div>
+    </div>
+
+    <div class="newslist" id="wrapper">
+        <div id="scroller">
+
+            <ul id="thelist">
+                <%for(var i=0;i<lists.length;i++){%>
+                <li class="newsItem">
+                    <a href="/show/<%=lists[i].id%>">
+                        <img src="/img/contents/cons/<%=lists[i].aimg.split(";")[0]%>" alt="">
+                    </a>
+                    <div class="img">
+                        <div class="focus"><%=lists[i].atitle.slice(0,6)%></div>
+                    </div>
+                    <div class="title">
+                        <h3><%=lists[i].atitle%></h3>
+                        <div class="more"></div>
+                    </div>
+                </li>
+                <%}%>
+            </ul>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

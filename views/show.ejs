@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/swiper.jquery.js"></script>
+    <script src="/js/swiper.animate1.0.2.min.js"></script>
+    <script src="/js/index.js"></script>
+    <title>News-APP</title>
+</head>
+<body>
+    <div class="content">
+        <div class="title">
+            <div class="back"><a href="/list/cid"></a></div>
+            <p><%=shows[0].atitle%></p>
+            <div class="nav"></div>
+            <div class="share"></div>
+        </div>
+        <div class="img">
+            <img src="/img/contents/cons/<%=shows[0].aimg.split(";")[0]%>" alt="">
+        </div>
+        <div class="head">
+            <%=shows[0].atitle%>
+        </div>
+        <div class="word">
+            <p><%=shows[0].acon%></p>
+            <p><img src="/img/contents/cons/<%=shows[0].aimg.split(";")[1]%>" alt=""></p>
+        </div>
+        <div class="pinglun">
+            <input type="text" placeholder="说点儿什么吧..." required autofocus>
+            <i class="iconfont icon-shoucang"></i>
+            <i class="iconfont icon-share6 share"></i>
+        </div>
+    </div>
+</body>
+</html>

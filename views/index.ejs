@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <title>News-APP</title>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="bg11 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"></div>
+            <div class="word">
+                <div class="word1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.7s">全新视角</div>
+                <div class="word2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.7s">探索天下</div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="bg11 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"></div>
+            <div class="word">
+                <div class="word1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">我的订阅</div>
+                <div class="word2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">专属定制</div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="bg11 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"></div>
+            <div class="word">
+                <div class="word1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">化繁为简</div>
+                <div class="word2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">一目了然</div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="bg11 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s"></div>
+            <div class="word">
+                <div class="word1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">包罗万象</div>
+                <div class="word2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">精彩推荐</div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="bg11 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.2s"></div>
+            <div class="word ani" swiper-animate-effect="swing" swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
+                <a href="/login"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+</body>
+<script>
+    function resise(designSize,type) {
+        var type= type || "x";
+        var width = document.documentElement.clientWidth;
+        var height = document.documentElement.clientHeight;
+        if(type == "x"){
+            var scale = width/designSize*100+"px";
+        }else if(type == "y"){
+            var scale = height/designSize*100+"px";
+        }
+        document.getElementsByTagName("html")[0].style.fontSize = scale;
+    }
+    resise(1334,"y");
+
+    //swiper插件启用
+    var mySwiper = new Swiper ('.swiper-container', {
+        // 如果需要分页器
+        // pagination: '.swiper-pagination',
+
+        //添加动画
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+
+    });
+</script>
+</html>

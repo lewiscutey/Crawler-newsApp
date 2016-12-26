@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>News-APP</title>
+</head>
+<body>
+    <div class="list">
+        <!--首页-->
+        <div id="index" class="menu">
+            <h2>新闻列表</h2>
+            <div class="input">
+                <div class="search">
+                    <div class="magnifier"></div>
+                    <input type="text" placeholder="请输入您想搜索的新闻列表名称，如：旅游" required autofocus>
+                </div>
+                <div class="cancel"></div>
+            </div>
+            <div class="new">
+                <%for(var i=0;i<categorys.length;i++){%>
+                    <div class="newss">
+                        <a href="/list/<%=categorys[i].cid%>">
+                            <%=categorys[i].cname%>
+                        </a>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+
+        <!--论坛页-->
+        <div id="luntan" class="menu">
+            <h2>奇闻论坛</h2>
+            <div class="input">
+                <div class="search">
+                    <div class="magnifier"></div>
+                    <input type="text" placeholder="请输入您想搜索的新闻，如：赵本山" required autofocus>
+                </div>
+                <div class="cancel"></div>
+            </div>
+            <div class="luntanlist">
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>好友动态</h3>
+                        <h5>更新7条好友动态</h5>
+                    </div>
+                    <div class="guanzhu"></div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>好奇心日报</h3>
+                        <h5>410.6万条讨论</h5>
+                    </div>
+                    <div class="guanzhu"></div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>理性乐观派</h3>
+                        <h5>350.6万条讨论</h5>
+                    </div>
+                    <div class="guanzhu"></div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>FipBoard</h3>
+                        <h5>380.6万条讨论</h5>
+                    </div>
+                    <div class="guanzhu"></div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>中国日报</h3>
+                        <h5>580.6万条讨论</h5>
+                    </div>
+                    <div class="guanzhu"></div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>丑事百科</h3>
+                        <h5>250.6万条讨论</h5>
+                    </div>
+                    <div class="guanzhu"></div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>网易云阅读</h3>
+                        <h5>290.6万条讨论</h5>
+                    </div>
+                    <div class="guanzhu"></div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>开心网阅读</h3>
+                        <h5>150.6万条讨论</h5>
+                    </div>
+                    <div class="guanzhu"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--消息页-->
+        <div id="xiaoxi" class="menu">
+            <h2>我的消息</h2>
+            <div class="input">
+                <div class="search">
+                    <div class="magnifier"></div>
+                    <input type="text" placeholder="请输入您想搜索的回复，如：我的回复" required autofocus>
+                </div>
+                <div class="cancel"></div>
+            </div>
+            <div class="xiaoxilist">
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>编辑精选</h3>
+                        <h5>蔡英文全面执政：没一个好消息！</h5>
+                    </div>
+                    <div class="time">1小时以前</div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>收到的赞</h3>
+                        <h5>暂无消息</h5>
+                    </div>
+                    <div class="time">刚刚</div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>收到的评论</h3>
+                        <h5>5条消息</h5>
+                    </div>
+                    <div class="time">刚刚</div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>收到的回复</h3>
+                        <h5>12条消息</h5>
+                    </div>
+                    <div class="time">昨天</div>
+                </div>
+                <div class="item">
+                    <div class="img"></div>
+                    <div class="huati">
+                        <h3>系统消息</h3>
+                        <h5>指挥官您有军情！</h5>
+                    </div>
+                    <div class="time">2016-12-6 12:05:38</div>
+                </div>
+            </div>
+        </div>
+
+        <!--我的页-->
+        <div id="wode" class="menu">
+            <div class="img">
+                <div class="yejian"></div>
+                <div class="lixian"></div>
+            </div>
+            <div class="option">
+                <div class="item">
+                    <img src="img/wode/lishi.png" alt="">
+                    <span>历史记录</span>
+                </div>
+                <div class="item">
+                    <img src="img/wode/shoucang.png" alt="">
+                    <span>我的收藏</span>
+                </div>
+                <div class="item">
+                    <img src="img/wode/tiezi.png" alt="">
+                    <span>我的跟帖</span>
+                </div>
+                <div class="item">
+                    <img src="img/wode/huyan.png" alt="">
+                    <span>护眼模式</span>
+                </div>
+            </div>
+            <div class="optionlist">
+                <div class="item">
+                    <h3>我的消息</h3>
+                    <div class="more"></div>
+                </div>
+                <div class="item">
+                    <h3>最新动态</h3>
+                    <div class="more"></div>
+                </div>
+                <div class="item">
+                    <h3>我的关注</h3>
+                    <div class="more"></div>
+                </div>
+                <div class="item">
+                    <h3>离线观看</h3>
+                    <div class="more"></div>
+                </div>
+                <div class="item">
+                    <h3>推送通知</h3>
+                    <div class="more"></div>
+                </div>
+                <div class="item">
+                    <h3>意见反馈</h3>
+                    <div class="more"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--菜单栏-->
+        <div id="nav">
+            <div class="item xinwen active">
+                <i class="iconfont icon-xinwen"></i>
+                <span>新闻</span>
+            </div>
+            <div class="item luntan">
+                <i class="iconfont icon-bbs"></i>
+                <span>论坛</span>
+            </div>
+            <div class="item xiaoxi">
+                <i class="iconfont icon-tubiao15"></i>
+                <span>消息</span>
+            </div>
+            <div class="item wode">
+                <i class="iconfont icon-wode"></i>
+                <span>我的</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
